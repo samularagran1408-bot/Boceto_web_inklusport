@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="../img/LOGO.jpeg" type="image/x-icon">
+  <link rel="stylesheet" href="../style/1.css">
+  <title>InkluSport - Deportes Adaptados</title>
+
+  <!--  GOOGLE FONTS: Tipografía moderna Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- ================ HEADER & NAV ================ -->
+  <header>
+    <nav>
+      <!-- Logo principal -->
+      <div class="logo">InkluSport</div>
+      <!-- Menú de navegación -->
+    <ul>
+      <li>
+        <a href="#inicio">
+          <!-- Heroicon: Home -->
+          Inicio
+        </a>
+      </li>
+
+      <li>
+        <a href="#registro">
+          <!-- Heroicon: UserPlus -->
+          Registro
+        </a>
+      </li>
+
+      <li>
+        <a href="#login">
+          Iniciar Sesión
+        </a>
+      </li>
+
+      <li>
+        <a href="#recomendaciones">
+          <!-- Heroicon: Sparkles -->
+          Recomendaciones
+        </a>
+      </li>
+    </ul>
+
+
+    </nav>
+  </header>
+
+  <!-- ================ CONTENIDO PRINCIPAL ================ -->
+  <main>
+    <!-- Sección de bienvenida -->
+    <section id="inicio" class="card">
+      <h1>Bienvenidos a InkluSport</h1>
+      <p>Plataforma que recomienda deportes adaptados según tu perfil: edad, género y tipo de discapacidad.</p>
+    </section>
+
+    <!-- Sección de registro -->
+    <section id="registro" class="card">
+      <h2>Registro</h2>
+      <form class="formulario" id="formRegistro">
+        <input type="text" id="nombre" placeholder="Nombre completo" required>
+        <input type="number" id="edad" placeholder="Edad" required>
+        <select id="genero" required>
+          <option value="">Seleccione género</option>
+          <option value="femenino">Femenino</option>
+          <option value="masculino">Masculino</option>
+        </select>
+        <select id="discapacidad" required>
+          <option value="">Tipo de discapacidad</option>
+          <option value="auditiva">Auditiva</option>
+          <option value="visual">Visual</option>
+          <option value="motriz">Motriz</option>
+          <option value="intelectual">Intelectual</option>
+        </select>
+        <button type="submit">Registrarse</button>
+      </form>
+    </section>
+
+    <!-- Sección de inicio de sesión -->
+    <section id="login" class="card">
+      <h2>Iniciar Sesión</h2>
+      <form class="formulario" onsubmit="return iniciarSesion(event)">
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+        <input type="password" id="clave" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+
+    <!-- Sección de recomendaciones -->
+    <section id="recomendaciones" class="card recomendaciones">
+      <h2>Recomendaciones Deportivas</h2>
+      <div id="resultado">
+        <p>Regístrate e inicia sesión para ver tus recomendaciones personalizadas.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================ FOOTER ================ -->
+  <footer>
+    © 2025 InkluSport · Inclusión y deporte adaptado
+  </footer>
+
+  <!-- ================ LÓGICA JS (placeholders) ================ -->
+  <script>
+    // Simula inicio de sesión
+    function iniciarSesion(e) {
+      e.preventDefault();
+      alert("Sesión iniciada. Ahora puedes ver tus recomendaciones.");
+      location.href = "#recomendaciones";
+      return false;
+    }
+
+  </script>
+
+  
+  <script>
+  document.getElementById("formRegistro").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // 1. Captura de datos
+    const nombre = document.getElementById("nombre").value;
+    const edad = parseInt(document.getElementById("edad").value);
+    const genero = document.getElementById("genero").value;
+    const discapacidad = document.getElementById("discapacidad").value;
+
+    // 2. Generar el mensaje con template literal CORRECTO
+    let mensaje = `<h3>Hola, ${nombre}</h3>`;
+
+    if (discapacidad === "auditiva") {
+      if (edad <= 12)      
+        mensaje += "<p>Te recomendamos: natación, atletismo o danza adaptada.</p>";
+      else if (edad <= 18) 
+        mensaje += "<p>Prueba fútbol adaptado, judo o ciclismo.</p>";
+      else                  
+        mensaje += "<p>Recomendamos escalada, yoga, tenis o atletismo.</p>";
+    }
+    else if (discapacidad === "visual") {
+      if (edad <= 12)      
+        mensaje += "<p>Prueba goalball, danza con guía o atletismo.</p>";
+      else if (edad <= 18) 
+        mensaje += "<p>Recomendamos atletismo con guía, judo o yoga adaptado.</p>";
+      else                  
+        mensaje += "<p>Te puede gustar ciclismo tándem, goalball o natación.</p>";
+    }
+    else if (discapacidad === "motriz") {
+      mensaje += "<p>Recomendamos: baloncesto en silla, natación o ciclismo adaptado.</p>";
+    }
+    else if (discapacidad === "intelectual") {
+      mensaje += "<p>Prueba natación, juegos funcionales o zumba adaptada.</p>";
+    }
+    else {
+      mensaje += "<p>Por favor selecciona un tipo de discapacidad para ver recomendaciones.</p>";
+    }
+
+    // 3. Mostrar en el div de recomendaciones
+    document.getElementById("resultado").innerHTML = mensaje;
+
+    // 4. Redirigir automáticamente
+    location.href = "#recomendaciones";
+  });
+</script>
+
+</body>
+</html>

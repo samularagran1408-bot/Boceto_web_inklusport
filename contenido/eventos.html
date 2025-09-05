@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Evento - InkluSport</title>
+  <link rel="stylesheet" href="../style/eventos.css">
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="shortcut icon" href="../img/LOGO.jpeg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <h1>Agregar Nuevo Evento</h1>
+
+  <form id="form-evento">
+    <label>Nombre del Evento:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Descripción:</label>
+    <textarea name="descripcion" required></textarea>
+
+    <label>Deporte:</label>
+    <input type="text" name="deporte" required>
+
+    <label>Tipo de Discapacidad:</label>
+    <input type="text" name="discapacidad" required>
+
+    <label>Categoría:</label>
+    <select name="categoria" required>
+      <option value="individual">Individual</option>
+      <option value="colectivo">Colectivo</option>
+    </select>
+
+    <label>Ciudad:</label>
+    <input type="text" name="ciudad" required>
+
+    <label>Fecha:</label>
+    <input type="date" name="fecha" required>
+
+    <label>Ubicación en el mapa:</label>
+    <div id="mapa" style="height: 300px; margin-bottom: 10px;"></div>
+
+    <input type="hidden" name="lat">
+    <input type="hidden" name="lng">
+
+    <button type="submit">Guardar Evento</button>
+  </form>
+
+  <script src="../JS/evento.js"></script>
+</body>
+</html>

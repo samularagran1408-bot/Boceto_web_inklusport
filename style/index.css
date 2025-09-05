@@ -1,0 +1,416 @@
+/* Tipografía base */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  background-color: #f9f9f9;
+}
+
+/* Encabezado */
+.header {
+  background-color: #c62828;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  z-index: 100;
+}
+
+.header .logo {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(to right, #c62828, #700d0d);
+  color: white;
+  padding-top: 100px; /* Aumenta si se solapa el texto */
+  margin-top: 50px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.boton {
+  background-color: #fff;
+  color: #c62828;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.boton:hover {
+  background-color: #caf0f8;
+}
+
+/* Secciones generales */
+.seccion {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.foto-portada {
+
+
+    margin: auto;
+    width: 100%; /*este es el ancho que va a ocupar el contenedor main*/
+    height: 300px; /*este es el alto que va aocupar el contenedor main*/
+    position: relative; /*esto es para que no se pierda el maquetado y cuando agreguemos contenido no se descuadre la pagina*/
+    margin-top: 85px; /*esto es para darle la margen al contenedor main en la parte de arriba */
+    background-image: url(../img/fondo.jpeg); /*esto es para colocar una imagen de fondo */
+    background-position: center; /*esta es para que la imagen se centre entodo el contenedor  */
+    background-size: cover; /*este es para que la imagen ocupe todo el contenedor */
+    background-repeat: no-repeat; /*este es para que la imagen no se vaya a repetir dentro del contenedor */
+    box-shadow: 0 8px 45px -22px black; /*el 5px es para que se vea a los lados - 0 es para que no se vea hacia abajo - 25px es el tamaÃ±o del desvanecido */
+}
+
+/*before -- es una seupdoclase que se utiliza para agregar elementos y colocarle estilos*/
+.foto-portada::before {
+    content: " "; /*este en el contenedor de la seupdoclase before y se coloca un espacio en blanco */
+    width: 100%; /*este es el ancho que ocupara el elemento */
+    height: 100%; /*este es el alto que ocupara el elemento*/
+    background: #918f8fc4; /*este es el color del elemento que vamos a utilizar*/
+    position: absolute; /*este es para que se visible el contenedor*/
+    top: 0; /*este es para que no tengan margenes en la parte de arriba*/
+    left: 0; /*este es para que no tenga margen en la izquierda*/
+}
+
+.info-portada {
+    max-width: 800px; /*este es el ancho que va a utilizar dentro del contenedor*/
+    height: 300px; /*este es el mismo alto que tiene su contenedor padre que viene siendo el main*/
+    margin: auto; /*este es para que se acomode auomaticamente*/
+    text-align: center; /*este es para centrar el texto*/
+    display: flex; /*este es para que el contendido se acomele en forma horizontal*/
+    flex-direction: column; /*este es para que el contendido quede en una sola columna*/
+    justify-content: center; /*este es para que el contenido se centre de forma horizontal*/
+    align-content: center; /*este es para que el contenido se centre de forma vertical*/
+    position: relative; /*este es para que se posicione cuando se utilice el z-index:1*/
+    z-index: 1; /*este es para que se posicione delante de un contenido*/
+
+}
+
+.info-portada h1 {
+    font-size: 47px; /*esta es para darle tamaÃ±o a la letra que tiene la informacion de la portada*/
+    margin-bottom: 8px; /*esta es para darle margen inferior a la portada */
+    color: white; /* este es para darle color al texto */
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+.seccion h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Servicios */
+.servicios ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.servicios li {
+  margin: 0.5rem 0;
+}
+
+/*aqui empiezan los estilos de las cards */
+
+.content-card {
+    max-width: 1200px; /*este es para aplicar el ancho maximo del contenedor */
+    margin: auto; /*este es para aplicar el margen del contenedor */
+    margin-top: 20px; /* este es para asignarle la margen en la parte de rriba */
+    perspective: 1000px; 
+    display: flex; /*este es para que los contenedores se organicen de forma horizontal */
+    justify-content: center; /* este es para centrar de forma vertical */
+    align-items: center; /* este es para que se centre de forma horizontal */
+    flex-wrap: wrap; /* este es para que cuando la pagina sea haga mas pequeÃ±a se organice en filas */
+    padding-bottom: 15px;
+    
+}
+
+.titulo{
+        color: white;
+        text-shadow: 1px 1px 2px black, 0 0 25px rgb(230, 63, 63), 0 0 5px rgb(199, 1, 11);
+        padding-top: 20px;
+        text-align: center;
+}
+
+.card-flip {
+    margin: 10px;
+    perspective: 1000px;
+}
+
+.card-flip:hover .card {
+       transform: rotateY(180deg);/*Hace que se pueda rotar para ver el contenido de atras de cada tarjeta*/
+    
+}
+
+.card {
+    width: 270px;
+    height: 450px;
+    background: goldenrod;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 600ms;
+    
+}
+
+.card-delantera,
+.card-atras {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  
+}
+
+.card-delantera {
+    background-size: cover;
+    background-position: center;
+    size: 10px;
+}
+
+.card-atras {
+    transform: rotateY(180deg);
+    background: white;
+}
+
+.contenido-card-delantera {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box; /* ← importante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    transform: translateZ(65px);
+}
+
+.contenido-card-delantera h1{
+    font-size: 18px; /* O ajusta a 16px, 14px según lo que necesites */
+    line-height: 1.2;
+    margin: 0;
+    padding: 0 5px;
+}
+
+.contenido-card-atras {
+    padding: 20px;
+    text-align: center;
+    transform: translateZ(65px);
+}
+
+.contenido-card-atras p {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.contenido-card-atras a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #002;
+  background: #a9ff6a;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px -6px #000;
+  transition: transform .2s ease;
+}
+.contenido-card-atras a:hover {
+  transform: scale(1.05);
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Testimonios */
+.testimonios blockquote {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  max-width: 700px;
+  line-height: 1.5;
+}
+
+.testimonios footer {
+  margin-top: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(to right, #c62828, #700d0d);
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.cta .boton-secundario {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  margin-left: 1rem;
+}
+
+.cta .boton-secundario:hover {
+  background-color: white;
+  color: #c62828;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to right, #c62828, #700d0d);
+  color: white;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  font-size: 0.9rem;
+}
+
+/* ======================================
+   DISEÑO RESPONSIVO
+   ====================================== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav a {
+    margin: 0.5rem 0;
+  }
+
+  .hero {
+    padding-top: 120px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .foto-portada {
+    height: auto;
+    padding: 2rem 1rem;
+    background-size: cover;
+  }
+
+  .info-portada {
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .info-portada h1,
+  .info-portada h2 {
+    font-size: 1.5rem;
+  }
+
+  .content-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .card-flip {
+    margin: 15px 0;
+  }
+
+  .card {
+    width: 90vw;
+    height: 400px;
+  }
+
+  .servicios ul {
+    font-size: 1rem;
+  }
+
+  .servicios li {
+    margin: 0.5rem 0;
+  }
+
+  .seccion h2 {
+    font-size: 1.5rem;
+  }
+
+  .contenido-card-delantera h1 {
+    font-size: 1rem;
+  }
+
+  .contenido-card-atras p {
+    font-size: 16px;
+  }
+
+  .contenido-card-atras a {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .cta {
+    text-align: center;
+  }
+
+  .cta .boton,
+  .cta .boton-secundario {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
+}
+

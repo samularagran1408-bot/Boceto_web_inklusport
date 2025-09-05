@@ -1,0 +1,173 @@
+/*  VARIABLES CSS: Colores y fuente base */
+    :root {
+      --color-bg: #f5f5f5;
+      --color-primary: #c62828;
+      --color-secondary: #424242;
+      --color-light: #ffffff;
+      --color-accent: #ffd54f;
+      --font-base: 'Roboto', sans-serif;
+    }
+
+    /* RESET BÁSICO y fuente global */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: var(--font-base);
+    }
+
+    body {
+      background: var(--color-bg);
+      color: var(--color-secondary);
+      line-height: 1.6;
+    }
+
+    /* ================================
+        HEADER FIJO CON SOMBRA
+       ================================ */
+    header {
+      position: fixed;/*Menu fijo*/
+      top: 0; left: 0; right: 0;
+      background: var(--color-light);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    /* ================================
+        NAVEGACIÓN
+       ================================ */
+    nav {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;/*Para que puedan quedar horizontalmente*/
+      align-items: center;
+      justify-content: space-between;/*Para que el logo quede gran parte distanciado de los enlaces del menu*/
+      padding: 1rem 2rem;
+    }
+    /* Logo a la izquierda */
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+    }
+    /* Lista horizontal de enlaces */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      vertical-align: middle;
+      stroke-width: 2;
+    }
+
+
+    nav a {
+      text-decoration: none;
+      color: var(--color-secondary);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--color-primary);
+    }
+
+    /*  CONTENEDOR PRINCIPAL */
+    main {
+      padding-top: 80px; /* Espacio para el header fijo */
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    /* ================================
+       SECCIONES "CARD"
+       ================================ */
+    section {
+      margin: 2rem 0;
+    }
+    .card {
+      background: var(--color-light);
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 2rem;
+    }
+
+    h1, h2 {
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+
+    /* ================================
+        FORMULARIOS ESTILIZADOS
+       ================================ */
+    .formulario {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;/*Espacio entre cada espacio para rellenar*/
+    }
+    .formulario input,
+    .formulario select,
+    .formulario button {
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    /* Focus visible en inputs */
+    .formulario input:focus,
+    .formulario select:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 2px rgba(198,40,40,0.2);
+    }
+    /* Botón principal */
+    .formulario button {
+      background: var(--color-primary);
+      color: var(--color-light);
+      border: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .formulario button:hover {
+      background: #b71c1c;
+    }
+
+    /* ================================
+        RECOMENDACIONES
+       ================================ */
+    .recomendaciones p {
+      background: var(--color-accent);
+      padding: 1rem;
+      border-radius: 6px;
+    }
+
+    /* ================================
+        FOOTER MINIMALISTA
+       ================================ */
+    footer {
+      background: var(--color-secondary);
+      color: var(--color-light);
+      text-align: center;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+    }
+
+    /* ================================
+        RESPONSIVE A partir de 768px de ancho: dos columnas iguales
+       ================================ */
+    @media (min-width: 768px) {/*Pa que se ajuste a cualquier pantalla*/
+      .formulario {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .formulario button {
+        grid-column: span 2;
+      }
+    }

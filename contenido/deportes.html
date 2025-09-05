@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explora Deportes | InkluSport</title>
+  <link rel="stylesheet" href="../style/deportes.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="../img/LOGO.jpeg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 1. Header reutilizado -->
+  <header class="header">
+    <div class="logo">InkluSport</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="explora-deportes.html" class="activo">Deportes</a>
+      <a href="#">Eventos</a>
+      <a href="#">Accesibilidad</a>
+      <a href="#">Ingresar</a>
+    </nav>
+  </header>
+
+  <!-- 2. Hero / título de la página -->
+  <section class="hero hero-deportes">
+    <h1>Explora deportes inclusivos</h1>
+    <p>Filtra disciplinas según tu interés y tipo de discapacidad.</p>
+  </section>
+
+  <!-- 3. Barra de filtros (tipo de discapacidad, categoría, búsqueda) -->
+  <section class="filtros">
+    <form id="form-filtros">
+      <select name="discapacidad"  id="select-discapacidad">
+        <option value="">Tipo de discapacidad</option>
+        <option>Visual</option>
+        <option>Auditiva</option>
+        <option>Física</option>
+        <option>Neurológica</option>
+        <option>Multidiscapacidad</option>
+      </select>
+
+      <select name="categoria" id="select-categoria">
+        <option value="">Categoría</option>
+        <option>Individual</option>
+        <option>Colectivo</option>
+      </select>
+    </form>
+  </section>
+
+  <!-- 4. Grid/lista de deportes -->
+  <section class="grid-deportes">
+    <!-- Ejemplo de tarjeta de deporte -->
+    <article class="tarjeta-deporte" data-discapacidad="Física" data-categoria="Colectivo">
+      <img src="../img/basket.jpg" alt="Baloncesto en silla de ruedas">
+      <h2>Baloncesto en silla de ruedas</h2>
+      <p class="categoria">Colectivo</p>
+      <p class="descripcion">
+        Variante accesible del baloncesto jugada por personas con movilidad reducida. Se utilizan sillas ligeras
+        diseñadas para la competición.
+      </p>
+      <a href="#" class="btn-card">Ver eventos</a>
+    </article>
+
+    <!-- Duplica article para más deportes -->
+  </section>
+
+  <!-- 4. Grid/lista de deportes -->
+  <section class="grid-deportes">
+    <!-- Ejemplo de tarjeta de deporte -->
+    <article class="tarjeta-deporte" data-discapacidad="Visual" data-categoria="Colectivo">
+      <img src="../img/futbol.jpg" alt="Futbol 5 para ciegos">
+      <h2>Futbol 5 para ciegos</h2>
+      <p class="categoria">Colectivo</p>
+      <p class="descripcion">
+        Se juega con pelota sonora y parches en los ojos para igualar condiciones. 
+        Los porteros son videntes y se guían por sonidos.
+      </p>
+      <a href="#" class="btn-card">Ver eventos</a>
+    </article>
+
+    <!-- Duplica article para más deportes -->
+  </section>
+
+  <!-- 4. Grid/lista de deportes -->
+  <section class="grid-deportes">
+    <!-- Ejemplo de tarjeta de deporte -->
+    <article class="tarjeta-deporte" data-discapacidad="Física" data-categoria="Individual">
+      <img src="../img/Atletismo.webp" alt="Atletismo adaptado">
+      <h2>Atletismo adaptado</h2>
+      <p class="categoria">Individual</p>
+      <p class="descripcion">
+        Incluye carreras, saltos y lanzamientos con adaptaciones según la discapacidad. 
+        Algunos atletas corren con prótesis o con guías.
+      </p>
+      <a href="#" class="btn-card">Ver eventos</a>
+    </article>
+
+    <!-- Duplica article para más deportes -->
+  </section>
+
+  <!-- 4. Grid/lista de deportes -->
+  <section class="grid-deportes">
+    <!-- Ejemplo de tarjeta de deporte -->
+    <article class="tarjeta-deporte" data-discapacidad="Neurológica" data-categoria="Individual">
+      <img src="../img/Equitación.jpg" alt="Equitación terapéutica">
+      <h2>Equitación terapéutica</h2>
+      <p class="categoria">Individual</p>
+      <p class="descripcion">
+        Usa el movimiento del caballo como herramienta 
+        para mejorar equilibrio, tono muscular y confianza.
+      </p>
+      <a href="#" class="btn-card">Ver eventos</a>
+    </article>
+
+    <!-- Duplica article para más deportes -->
+  </section>
+
+  <!-- 4. Grid/lista de deportes -->
+  <section class="grid-deportes">
+    <!-- Ejemplo de tarjeta de deporte -->
+    <article class="tarjeta-deporte" data-discapacidad="Auditiva" data-categoria="Colectivo">
+      <img src="../img/Voleibol.jpg" alt="Voleibol para sordos">
+      <h2>Voleibol para sordos</h2>
+      <p class="categoria">Colectivo</p>
+      <p class="descripcion">
+        Variante del voleibol donde se reemplazan señales sonoras por visuales, como el uso de banderas, gestos o luces para indicar el inicio y las jugadas. 
+        La comunicación en equipo se da mediante señas o lenguaje visual.
+      </p>
+      <a href="#" class="btn-card">Ver eventos</a>
+    </article>
+
+    <!-- Duplica article para más deportes -->
+  </section>
+
+  <!-- 4. Grid/lista de deportes -->
+  <section class="grid-deportes">
+    <!-- Ejemplo de tarjeta de deporte -->
+    <article class="tarjeta-deporte" data-discapacidad="Física" data-categoria="Individual">
+      <img src="../img/Tenis.jpg" alt="Tenis en silla de ruedas">
+      <h2>Tenis en silla de ruedas</h2>
+      <p class="categoria">Individual</p>
+      <p class="descripcion">
+        Deporte similar al tenis tradicional, pero con la regla adicional de permitir dos botes de la pelota. 
+        Requiere sillas ligeras y maniobrables.
+      </p>
+      <a href="#" class="btn-card">Ver eventos</a>
+    </article>
+
+    <!-- Duplica article para más deportes -->
+  </section>
+
+  <!-- 4. Grid/lista de deportes -->
+  <section class="grid-deportes">
+    <!-- Ejemplo de tarjeta de deporte -->
+    <article class="tarjeta-deporte" data-discapacidad="Multidiscapacidad" data-categoria="Individual">
+      <img src="../img/Natación.jpg" alt="Natación adaptada">
+      <h2>Natación adaptada</h2>
+      <p class="categoria">Individual</p>
+      <p class="descripcion">
+        Permite la participación de personas con todo tipo de discapacidad, 
+        adaptando salidas, técnicas y estilos según la movilidad.
+      </p>
+      <a href="#" class="btn-card">Ver eventos</a>
+    </article>
+
+    <!-- Duplica article para más deportes -->
+  </section>
+
+  <!-- 4. Grid/lista de deportes -->
+  <section class="grid-deportes">
+    <!-- Ejemplo de tarjeta de deporte -->
+    <article class="tarjeta-deporte" data-discapacidad="Auditiva" data-categoria="Individual">
+      <img src="../img/takewondo.jpg" alt="Taekwondo">
+      <h2>Taekwondo</h2>
+      <p class="categoria">Individual</p>
+      <p class="descripcion">
+        Deporte de combate donde se adaptan las instrucciones y arbitraje al lenguaje de señas y señales visuales. 
+        Promueve la coordinación, disciplina y autodefensa sin necesidad de estímulos auditivos.
+      </p>
+      <a href="#" class="btn-card">Ver eventos</a>
+    </article>
+
+    <!-- Duplica article para más deportes -->
+  </section>
+
+  <!-- 4. Grid/lista de deportes -->
+  <section class="grid-deportes">
+    <!-- Ejemplo de tarjeta de deporte -->
+    <article class="tarjeta-deporte" data-discapacidad="Neurológica" data-categoria="Individual,Colectivo">
+      <img src="../img/Boccia.jpeg" alt="Boccia">
+      <h2>Boccia</h2>
+      <p class="categoria">Individual o Colectivo</p>
+      <p class="descripcion">
+        Similar a la petanca, busca posicionar las bolas lo más cerca posible de la bola blanca. 
+        Jugado con manos, pies o dispositivos de asistencia.
+      </p>
+      <a href="#" class="btn-card">Ver eventos</a>
+    </article>
+
+    <!-- Duplica article para más deportes -->
+  </section>
+
+  <!-- 5. CTA final -->
+  <section class="cta">
+    <h2>¿No encuentras tu deporte?</h2>
+    <p>Contáctanos y te ayudamos a conectarte con organizaciones locales.</p>
+    <a href="mailto:info@inklusport.com" class="boton">Escríbenos</a>
+  </section>
+
+  <!-- 6. Footer -->
+  
+  <script>
+    /* --- Filtro automático al cambiar cualquier select --- */
+    const form = document.getElementById('form-filtros');
+    const tarjetas = document.querySelectorAll('.tarjeta-deporte');
+
+    function aplicarFiltros() {//Se encarga de mostrar u ocultar tarjetas
+      const discapacidadSel = form.discapacidad.value.trim();
+      const categoriaSel = form.categoria.value.trim();
+
+      tarjetas.forEach(tarjeta => {//Revisa cada trajeta una por una
+        /* 1. Convertimos los data-* en arrays por si hay múltiples valores separados por comas */
+        const listaDis = tarjeta.dataset.discapacidad.split(',');
+        const listaCat = tarjeta.dataset.categoria.split(',');
+
+        /* 2. Comprobamos coincidencias */
+        const okDiscapacidad = !discapacidadSel || listaDis.includes(discapacidadSel);
+        const okCategoria   = !categoriaSel   || listaCat.includes(categoriaSel);
+
+        tarjeta.style.display = (okDiscapacidad && okCategoria) ? 'flex' : 'none';
+      });
+    }
+
+    /* Dispara filtro cada vez que cambie un select */
+    form.addEventListener('change', aplicarFiltros);
+
+    /* Opcional: mostrar todo al cargar */
+    aplicarFiltros();
+    </script>
+
+
+
+</body>
+</html>

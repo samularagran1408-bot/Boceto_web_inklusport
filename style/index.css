@@ -14,7 +14,7 @@ body {
   top: 0; left: 0; right: 0;
   color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem 2rem;
   align-items: center;
   z-index: 100;

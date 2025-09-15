@@ -43,7 +43,6 @@ body {
   background: linear-gradient(to right, #c62828, #700d0d);
   color: white;
   padding-top: 100px; /* Aumenta si se solapa el texto */
-  margin-top: 50px;
 }
 
 .hero h1 {
@@ -79,13 +78,13 @@ body {
 }
 
 .foto-portada {
-
-
+    display: flex;
     margin: auto;
+    align-items: center;
     width: 100%; /*este es el ancho que va a ocupar el contenedor main*/
-    height: 300px; /*este es el alto que va aocupar el contenedor main*/
+    height: 450px; /*este es el alto que va aocupar el contenedor main*/
     position: relative; /*esto es para que no se pierda el maquetado y cuando agreguemos contenido no se descuadre la pagina*/
-    margin-top: 85px; /*esto es para darle la margen al contenedor main en la parte de arriba */
+    margin-top: 60px; /*esto es para darle la margen al contenedor main en la parte de arriba */
     background-image: url(../img/fondo.jpeg); /*esto es para colocar una imagen de fondo */
     background-position: center; /*esta es para que la imagen se centre entodo el contenedor  */
     background-size: cover; /*este es para que la imagen ocupe todo el contenedor */
